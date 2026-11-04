@@ -1,0 +1,3413 @@
+Model {
+  Name			  "IIRCanonique"
+  Version		  7.0
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.121"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  PreSaveFcn		  ";"
+  CloseFcn		  ";"
+  InitFcn		  ";"
+  StartFcn		  ";"
+  StopFcn		  ";"
+  Created		  "Wed Aug 30 09:57:20 2000"
+  Creator		  "MENARD"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "MENARD"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Aug 31 13:55:11 2009"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "1.%<AutoIncrement:121>"
+  ConfigurationManager	  "none"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  off
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.3.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.3.0"
+	  StartTime		  "0.0"
+	  StopTime		  "50000"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.3.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "sigsOut"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  BlockReduction	  on
+	  BooleanDataType	  off
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  off
+	  BufferReuse		  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  off
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  off
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.3.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "None"
+	  LoggingUnavailableSignals "error"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.3.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  on
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.3.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  on
+	  GenerateTraceInfo	  off
+	  RTWCompilerOptimization "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		15
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      DiscreteFilter
+      Numerator		      "[1]"
+      Denominator	      "[1 2]"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+      Realization	      "auto"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RandomNumber
+      Mean		      "0"
+      Variance		      "1"
+      Seed		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+    }
+    Block {
+      BlockType		      UnitDelay
+      X0		      "0"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "IIRCanonique"
+    Location		    [2, 84, 993, 718]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.196850, 0.196850, 0.196850, 0.196850]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "75"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      ToWorkspace
+      Name		      " 11"
+      Position		      [455, 327, 525, 353]
+      VariableName	      "x_fix"
+      MaxDataPoints	      "inf"
+      SampleTime	      "1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      " 3"
+      Position		      [410, 212, 480, 238]
+      VariableName	      "x_flottant"
+      MaxDataPoints	      "inf"
+      SampleTime	      "1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "6"
+      Position		      [1315, 400, 1355, 430]
+      VariableName	      "y_fix"
+      MaxDataPoints	      "inf"
+      SampleTime	      "1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Cell1"
+      Ports		      [1, 1]
+      Position		      [510, 383, 630, 447]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      System {
+	Name			"Cell1"
+	Location		[2, 84, 1270, 955]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [35, 25, 65, 40]
+	  Orientation		  "down"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " "
+	  Position		  [560, 95, 625, 125]
+	  Value			  "NumFix1(1)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 1"
+	  Position		  [565, 240, 630, 270]
+	  Value			  "NumFix1(2)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 2"
+	  Position		  [560, 365, 625, 395]
+	  Value			  "NumFix1(3)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 3"
+	  Position		  [400, 239, 460, 271]
+	  Orientation		  "left"
+	  Value			  "-DenFix1(2)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 6"
+	  Position		  [410, 365, 480, 395]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  Value			  "-DenFix1(3)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion1"
+	  Tag			  "S16 2^-12"
+	  Position		  [775, 80, 815, 120]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion10"
+	  Tag			  "S16 2^-13"
+	  Position		  [1090, 110, 1130, 150]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "y.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion2"
+	  Tag			  "S16 2^-12"
+	  Position		  [85, 40, 125, 80]
+	  NamePlacement		  "alternate"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion3"
+	  Tag			  "S16 2^-13"
+	  Position		  [350, 70, 390, 110]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "d.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion5"
+	  Tag			  "S16 2^-12"
+	  Position		  [780, 225, 820, 265]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion6"
+	  Tag			  "S16 2^-12"
+	  Position		  [195, 225, 235, 265]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion7"
+	  Tag			  "S16 2^-12"
+	  Position		  [780, 350, 820, 390]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion8"
+	  Tag			  "S16 2^-12"
+	  Position		  [210, 350, 250, 390]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In"
+	  Tag			  "S16 2^-15"
+	  Position		  [655, 96, 690, 124]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In1"
+	  Tag			  "S16 2^-15"
+	  Position		  [655, 241, 690, 269]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In2"
+	  Tag			  "S16 2^-15"
+	  Position		  [650, 366, 685, 394]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In5"
+	  Tag			  "S16 2^-15"
+	  Position		  [335, 240, 375, 270]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "a.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In6"
+	  Tag			  "S16 2^-15"
+	  Position		  [345, 365, 385, 395]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "a.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [710, 80, 750, 120]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct1"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [715, 225, 755, 265]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct2"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [720, 350, 760, 390]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct5"
+	  Tag			  "S16 2^-12"
+	  Ports			  [2, 1]
+	  Position		  [265, 225, 305, 265]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sma1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct6"
+	  Tag			  "S16 2^-12"
+	  Ports			  [2, 1]
+	  Position		  [280, 350, 320, 390]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sma1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "FixPt\nSum1"
+	  Tag			  "S16 2^-12"
+	  Ports			  [3, 1]
+	  Position		  [185, 48, 230, 132]
+	  AttributesFormatString  "%<Tag>"
+	  Inputs		  "+++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "FixPt\nSum6"
+	  Tag			  "S16 2^-12"
+	  Ports			  [3, 1]
+	  Position		  [925, 88, 970, 172]
+	  AttributesFormatString  "%<Tag>"
+	  Inputs		  "+++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "FixPt\nUnit Delay7"
+	  Position		  [495, 285, 535, 325]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  X0			  "0.0"
+	  SampleTime		  "1.0"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "FixPt\nUnit Delay8"
+	  Position		  [495, 160, 535, 200]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  X0			  "0.0"
+	  SampleTime		  "1.0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope"
+	  Ports			  [1]
+	  Position		  [1040, 54, 1070, 86]
+	  Floating		  off
+	  Location		  [188, 365, 512, 604]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope1"
+	  Ports			  [1]
+	  Position		  [300, 14, 330, 46]
+	  Floating		  off
+	  Location		  [188, 365, 512, 604]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  SaveName		  "ScopeData1"
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  Position		  [1245, 123, 1275, 137]
+	  NamePlacement		  "alternate"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct2"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "FixPt\nGateway In1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nSum6"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nConversion10"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Scope"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion7"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, -210]
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion5"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -115]
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nUnit Delay8"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 30]
+	  Branch {
+	    DstBlock		    "FixPt\nUnit Delay7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct5"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nUnit Delay7"
+	  SrcPort		  1
+	  Points		  [0, 30]
+	  Branch {
+	    DstBlock		    "FixPt\nProduct2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct6"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " "
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In5"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct5"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nSum1"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nConversion3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Scope1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion6"
+	  SrcPort		  1
+	  Points		  [-30, 0; 0, -125]
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  " 3"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct5"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion10"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion8"
+	  SrcPort		  1
+	  Points		  [-75, 0; 0, -280]
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  Points		  [0, 15]
+	  DstBlock		  "FixPt\nConversion2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion3"
+	  SrcPort		  1
+	  Points		  [0, 0; 120, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nUnit Delay8"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Cell2"
+      Ports		      [1, 1]
+      Position		      [695, 383, 815, 447]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      System {
+	Name			"Cell2"
+	Location		[2, 84, 1270, 955]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [35, 25, 65, 40]
+	  Orientation		  "down"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " "
+	  Position		  [560, 95, 625, 125]
+	  Value			  "NumFix2(1)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 1"
+	  Position		  [565, 240, 630, 270]
+	  Value			  "NumFix2(2)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 2"
+	  Position		  [565, 365, 630, 395]
+	  Value			  "NumFix2(3)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 3"
+	  Position		  [400, 239, 460, 271]
+	  Orientation		  "left"
+	  Value			  "-DenFix2(2)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 6"
+	  Position		  [410, 365, 480, 395]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  Value			  "-DenFix2(3)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion1"
+	  Tag			  "S16 2^-12"
+	  Position		  [775, 80, 815, 120]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion10"
+	  Tag			  "S16 2^-13"
+	  Position		  [1090, 110, 1130, 150]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "y.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion2"
+	  Tag			  "S16 2^-12"
+	  Position		  [85, 40, 125, 80]
+	  NamePlacement		  "alternate"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion3"
+	  Tag			  "S16 2^-13"
+	  Position		  [350, 70, 390, 110]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "d.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion5"
+	  Tag			  "S16 2^-12"
+	  Position		  [780, 225, 820, 265]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion6"
+	  Tag			  "S16 2^-12"
+	  Position		  [195, 225, 235, 265]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion7"
+	  Tag			  "S16 2^-12"
+	  Position		  [780, 350, 820, 390]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion8"
+	  Tag			  "S16 2^-12"
+	  Position		  [210, 350, 250, 390]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In"
+	  Tag			  "S16 2^-15"
+	  Position		  [655, 96, 690, 124]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In1"
+	  Tag			  "S16 2^-15"
+	  Position		  [655, 241, 690, 269]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In2"
+	  Tag			  "S16 2^-15"
+	  Position		  [650, 366, 685, 394]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In5"
+	  Tag			  "S16 2^-15"
+	  Position		  [335, 240, 375, 270]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "a.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In6"
+	  Tag			  "S16 2^-15"
+	  Position		  [345, 365, 385, 395]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "a.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [710, 80, 750, 120]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct1"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [715, 225, 755, 265]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct2"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [720, 350, 760, 390]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct5"
+	  Tag			  "S16 2^-12"
+	  Ports			  [2, 1]
+	  Position		  [265, 225, 305, 265]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sma1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct6"
+	  Tag			  "S16 2^-12"
+	  Ports			  [2, 1]
+	  Position		  [280, 350, 320, 390]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sma1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "FixPt\nSum1"
+	  Tag			  "S16 2^-12"
+	  Ports			  [3, 1]
+	  Position		  [185, 48, 230, 132]
+	  AttributesFormatString  "%<Tag>"
+	  Inputs		  "+++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "FixPt\nSum6"
+	  Tag			  "S16 2^-12"
+	  Ports			  [3, 1]
+	  Position		  [925, 88, 970, 172]
+	  AttributesFormatString  "%<Tag>"
+	  Inputs		  "+++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "FixPt\nUnit Delay7"
+	  Position		  [495, 285, 535, 325]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  X0			  "0.0"
+	  SampleTime		  "1.0"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "FixPt\nUnit Delay8"
+	  Position		  [495, 160, 535, 200]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  X0			  "0.0"
+	  SampleTime		  "1.0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope"
+	  Ports			  [1]
+	  Position		  [1040, 54, 1070, 86]
+	  Floating		  off
+	  Location		  [188, 365, 512, 604]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope1"
+	  Ports			  [1]
+	  Position		  [300, 14, 330, 46]
+	  Floating		  off
+	  Location		  [188, 365, 512, 604]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  SaveName		  "ScopeData1"
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  Position		  [1245, 123, 1275, 137]
+	  NamePlacement		  "alternate"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct2"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "FixPt\nGateway In1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nSum6"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nConversion10"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Scope"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion7"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, -210]
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion5"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -115]
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nUnit Delay8"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 30]
+	  Branch {
+	    DstBlock		    "FixPt\nUnit Delay7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct5"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nUnit Delay7"
+	  SrcPort		  1
+	  Points		  [0, 30]
+	  Branch {
+	    DstBlock		    "FixPt\nProduct2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct6"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " "
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In5"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct5"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nSum1"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nConversion3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Scope1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion6"
+	  SrcPort		  1
+	  Points		  [-30, 0; 0, -125]
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  " 3"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct5"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion10"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion8"
+	  SrcPort		  1
+	  Points		  [-75, 0; 0, -280]
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  Points		  [0, 15]
+	  DstBlock		  "FixPt\nConversion2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion3"
+	  SrcPort		  1
+	  Points		  [0, 0; 120, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nUnit Delay8"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Cell3"
+      Ports		      [1, 1]
+      Position		      [895, 383, 1015, 447]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      System {
+	Name			"Cell3"
+	Location		[2, 84, 1270, 955]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [35, 25, 65, 40]
+	  Orientation		  "down"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " "
+	  Position		  [560, 95, 625, 125]
+	  Value			  "NumFix3(1)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 1"
+	  Position		  [565, 240, 630, 270]
+	  Value			  "NumFix3(2)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 2"
+	  Position		  [560, 365, 625, 395]
+	  Value			  "NumFix3(3)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 3"
+	  Position		  [400, 239, 460, 271]
+	  Orientation		  "left"
+	  Value			  "-DenFix3(2)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 6"
+	  Position		  [410, 365, 480, 395]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  Value			  "-DenFix3(3)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion1"
+	  Tag			  "S16 2^-12"
+	  Position		  [775, 80, 815, 120]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion10"
+	  Tag			  "S16 2^-13"
+	  Position		  [1090, 110, 1130, 150]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "y.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion2"
+	  Tag			  "S16 2^-12"
+	  Position		  [85, 40, 125, 80]
+	  NamePlacement		  "alternate"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion3"
+	  Tag			  "S16 2^-13"
+	  Position		  [350, 70, 390, 110]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "d.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion5"
+	  Tag			  "S16 2^-12"
+	  Position		  [780, 225, 820, 265]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion6"
+	  Tag			  "S16 2^-12"
+	  Position		  [195, 225, 235, 265]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion7"
+	  Tag			  "S16 2^-12"
+	  Position		  [780, 350, 820, 390]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion8"
+	  Tag			  "S16 2^-12"
+	  Position		  [210, 350, 250, 390]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In"
+	  Tag			  "S16 2^-15"
+	  Position		  [655, 96, 690, 124]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In1"
+	  Tag			  "S16 2^-15"
+	  Position		  [655, 241, 690, 269]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In2"
+	  Tag			  "S16 2^-15"
+	  Position		  [650, 366, 685, 394]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In5"
+	  Tag			  "S16 2^-15"
+	  Position		  [335, 240, 375, 270]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "a.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In6"
+	  Tag			  "S16 2^-15"
+	  Position		  [345, 365, 385, 395]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "a.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [710, 80, 750, 120]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct1"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [715, 225, 755, 265]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct2"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [720, 350, 760, 390]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct5"
+	  Tag			  "S16 2^-12"
+	  Ports			  [2, 1]
+	  Position		  [265, 225, 305, 265]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sma1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct6"
+	  Tag			  "S16 2^-12"
+	  Ports			  [2, 1]
+	  Position		  [280, 350, 320, 390]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sma1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "FixPt\nSum1"
+	  Tag			  "S16 2^-12"
+	  Ports			  [3, 1]
+	  Position		  [185, 48, 230, 132]
+	  AttributesFormatString  "%<Tag>"
+	  Inputs		  "+++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "FixPt\nSum6"
+	  Tag			  "S16 2^-12"
+	  Ports			  [3, 1]
+	  Position		  [925, 88, 970, 172]
+	  AttributesFormatString  "%<Tag>"
+	  Inputs		  "+++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "FixPt\nUnit Delay7"
+	  Position		  [495, 285, 535, 325]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  X0			  "0.0"
+	  SampleTime		  "1.0"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "FixPt\nUnit Delay8"
+	  Position		  [495, 160, 535, 200]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  X0			  "0.0"
+	  SampleTime		  "1.0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope"
+	  Ports			  [1]
+	  Position		  [1040, 54, 1070, 86]
+	  Floating		  off
+	  Location		  [188, 365, 512, 604]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope1"
+	  Ports			  [1]
+	  Position		  [300, 14, 330, 46]
+	  Floating		  off
+	  Location		  [188, 365, 512, 604]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  SaveName		  "ScopeData1"
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  Position		  [1245, 123, 1275, 137]
+	  NamePlacement		  "alternate"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct2"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "FixPt\nGateway In1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nSum6"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nConversion10"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Scope"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion7"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, -210]
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion5"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -115]
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nUnit Delay8"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 30]
+	  Branch {
+	    DstBlock		    "FixPt\nUnit Delay7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct5"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nUnit Delay7"
+	  SrcPort		  1
+	  Points		  [0, 30]
+	  Branch {
+	    DstBlock		    "FixPt\nProduct2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct6"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " "
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In5"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct5"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nSum1"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nConversion3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Scope1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion6"
+	  SrcPort		  1
+	  Points		  [-30, 0; 0, -125]
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  " 3"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct5"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion10"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion8"
+	  SrcPort		  1
+	  Points		  [-75, 0; 0, -280]
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  Points		  [0, 15]
+	  DstBlock		  "FixPt\nConversion2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion3"
+	  SrcPort		  1
+	  Points		  [0, 0; 120, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nUnit Delay8"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Cell4"
+      Ports		      [1, 1]
+      Position		      [1110, 383, 1230, 447]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      System {
+	Name			"Cell4"
+	Location		[2, 84, 1270, 955]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [35, 25, 65, 40]
+	  Orientation		  "down"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " "
+	  Position		  [560, 95, 625, 125]
+	  Value			  "NumFix4(1)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 1"
+	  Position		  [565, 240, 630, 270]
+	  Value			  "NumFix4(2)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 2"
+	  Position		  [560, 365, 625, 395]
+	  Value			  "NumFix4(3)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 3"
+	  Position		  [400, 239, 460, 271]
+	  Orientation		  "left"
+	  Value			  "-DenFix4(2)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  " 6"
+	  Position		  [410, 365, 480, 395]
+	  Orientation		  "left"
+	  NamePlacement		  "alternate"
+	  Value			  "-DenFix4(3)"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion1"
+	  Tag			  "S16 2^-12"
+	  Position		  [775, 80, 815, 120]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion10"
+	  Tag			  "S16 2^-13"
+	  Position		  [1090, 110, 1130, 150]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "y.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion2"
+	  Tag			  "S16 2^-12"
+	  Position		  [85, 40, 125, 80]
+	  NamePlacement		  "alternate"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion3"
+	  Tag			  "S16 2^-13"
+	  Position		  [350, 70, 390, 110]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "d.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion5"
+	  Tag			  "S16 2^-12"
+	  Position		  [780, 225, 820, 265]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion6"
+	  Tag			  "S16 2^-12"
+	  Position		  [195, 225, 235, 265]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion7"
+	  Tag			  "S16 2^-12"
+	  Position		  [780, 350, 820, 390]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nConversion8"
+	  Tag			  "S16 2^-12"
+	  Position		  [210, 350, 250, 390]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In"
+	  Tag			  "S16 2^-15"
+	  Position		  [655, 96, 690, 124]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In1"
+	  Tag			  "S16 2^-15"
+	  Position		  [655, 241, 690, 269]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In2"
+	  Tag			  "S16 2^-15"
+	  Position		  [650, 366, 685, 394]
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "b.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In5"
+	  Tag			  "S16 2^-15"
+	  Position		  [335, 240, 375, 270]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "a.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "FixPt\nGateway In6"
+	  Tag			  "S16 2^-15"
+	  Position		  [345, 365, 385, 395]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "a.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [710, 80, 750, 120]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct1"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [715, 225, 755, 265]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct2"
+	  Tag			  "S16 2^-14"
+	  Ports			  [2, 1]
+	  Position		  [720, 350, 760, 390]
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "smb1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct5"
+	  Tag			  "S16 2^-12"
+	  Ports			  [2, 1]
+	  Position		  [265, 225, 305, 265]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sma1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "FixPt\nProduct6"
+	  Tag			  "S16 2^-12"
+	  Ports			  [2, 1]
+	  Position		  [280, 350, 320, 390]
+	  Orientation		  "left"
+	  AttributesFormatString  "%<Tag>"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sma1.format"
+	  OutScaling		  "0"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "FixPt\nSum1"
+	  Tag			  "S16 2^-12"
+	  Ports			  [3, 1]
+	  Position		  [185, 48, 230, 132]
+	  AttributesFormatString  "%<Tag>"
+	  Inputs		  "+++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd1.format"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "FixPt\nSum6"
+	  Tag			  "S16 2^-12"
+	  Ports			  [3, 1]
+	  Position		  [925, 88, 970, 172]
+	  AttributesFormatString  "%<Tag>"
+	  Inputs		  "+++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sadd2.format"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "FixPt\nUnit Delay7"
+	  Position		  [495, 285, 535, 325]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  X0			  "0.0"
+	  SampleTime		  "1.0"
+	}
+	Block {
+	  BlockType		  UnitDelay
+	  Name			  "FixPt\nUnit Delay8"
+	  Position		  [495, 160, 535, 200]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  X0			  "0.0"
+	  SampleTime		  "1.0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope"
+	  Ports			  [1]
+	  Position		  [1040, 54, 1070, 86]
+	  Floating		  off
+	  Location		  [188, 365, 512, 604]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope1"
+	  Ports			  [1]
+	  Position		  [300, 14, 330, 46]
+	  Floating		  off
+	  Location		  [188, 365, 512, 604]
+	  Open			  off
+	  NumInputPorts		  "1"
+	  List {
+	    ListType		    AxesTitles
+	    axes1		    "%<SignalLabel>"
+	  }
+	  SaveName		  "ScopeData1"
+	  DataFormat		  "StructureWithTime"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y"
+	  Position		  [1245, 123, 1275, 137]
+	  NamePlacement		  "alternate"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct2"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "FixPt\nGateway In1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nSum6"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nConversion10"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Scope"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion7"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, -210]
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion5"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -115]
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nUnit Delay8"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 30]
+	  Branch {
+	    DstBlock		    "FixPt\nUnit Delay7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    DstBlock		    "FixPt\nProduct5"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nUnit Delay7"
+	  SrcPort		  1
+	  Points		  [0, 30]
+	  Branch {
+	    DstBlock		    "FixPt\nProduct2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct6"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion1"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nSum6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " "
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nGateway In5"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nProduct5"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FixPt\nSum1"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nConversion3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Scope1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion6"
+	  SrcPort		  1
+	  Points		  [-30, 0; 0, -125]
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  " 3"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " 6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nGateway In6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct6"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nProduct5"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nConversion6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion10"
+	  SrcPort		  1
+	  DstBlock		  "y"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion8"
+	  SrcPort		  1
+	  Points		  [-75, 0; 0, -280]
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  Points		  [0, 15]
+	  DstBlock		  "FixPt\nConversion2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion3"
+	  SrcPort		  1
+	  Points		  [0, 0; 120, 0]
+	  Branch {
+	    DstBlock		    "FixPt\nUnit Delay8"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FixPt\nProduct"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FixPt\nConversion2"
+	  SrcPort		  1
+	  DstBlock		  "FixPt\nSum1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      DiscreteFilter
+      Name		      "Discrete Filter"
+      Position		      [510, 244, 635, 286]
+      Numerator		      "NumFix1"
+      Denominator	      "DenFix1"
+    }
+    Block {
+      BlockType		      DiscreteFilter
+      Name		      "Discrete Filter1"
+      Position		      [705, 244, 830, 286]
+      Numerator		      "NumFix2"
+      Denominator	      "DenFix2"
+    }
+    Block {
+      BlockType		      DiscreteFilter
+      Name		      "Discrete Filter2"
+      Position		      [905, 244, 1030, 286]
+      Numerator		      "NumFix3"
+      Denominator	      "DenFix3"
+    }
+    Block {
+      BlockType		      DiscreteFilter
+      Name		      "Discrete Filter3"
+      Position		      [1120, 244, 1245, 286]
+      Numerator		      "NumFix4"
+      Denominator	      "DenFix4"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "FixPt\nGateway In5"
+      Tag		      "S16 2^-15"
+      Position		      [230, 270, 270, 310]
+      AttributesFormatString  "%<Tag>"
+      OutDataTypeMode	      "Specify via dialog"
+      OutDataType	      "x.format"
+      OutScaling	      "0"
+      RndMeth		      "Nearest"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "FixPt to Dbl6"
+      Position		      [395, 321, 430, 359]
+      OutDataTypeMode	      "double"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      RndMeth		      "Nearest"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      RandomNumber
+      Name		      "Random\nNumber"
+      Position		      [85, 275, 115, 305]
+      Variance		      "1/(6^2)"
+      SampleTime	      "1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "Sauve e1"
+      Position		      [1300, 250, 1360, 280]
+      VariableName	      "y_flottant"
+      MaxDataPoints	      "inf"
+      SampleTime	      "1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "Sauve e2"
+      Position		      [680, 180, 740, 210]
+      VariableName	      "y_flottant1"
+      MaxDataPoints	      "inf"
+      SampleTime	      "1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "Sauve e23"
+      Position		      [905, 175, 965, 205]
+      VariableName	      "y_flottant2"
+      MaxDataPoints	      "inf"
+      SampleTime	      "1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "Sauve e24"
+      Position		      [1115, 170, 1175, 200]
+      VariableName	      "y_flottant3"
+      MaxDataPoints	      "inf"
+      SampleTime	      "1"
+      SaveFormat	      "Array"
+    }
+    Line {
+      SrcBlock		      "Random\nNumber"
+      SrcPort		      1
+      Points		      [0, 0; 25, 0]
+      Branch {
+	DstBlock		"FixPt\nGateway In5"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -25; 185, 0]
+	Branch {
+	  DstBlock		  "Discrete Filter"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, -40]
+	  DstBlock		  " 3"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Discrete Filter"
+      SrcPort		      1
+      Points		      [0, 0; 15, 0]
+      Branch {
+	DstBlock		"Discrete Filter1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -70]
+	DstBlock		"Sauve e2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Discrete Filter1"
+      SrcPort		      1
+      Points		      [0, 0; 20, 0]
+      Branch {
+	DstBlock		"Discrete Filter2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -75]
+	DstBlock		"Sauve e23"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "FixPt to Dbl6"
+      SrcPort		      1
+      DstBlock		      " 11"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "FixPt\nGateway In5"
+      SrcPort		      1
+      Points		      [50, 0; 0, 45]
+      Branch {
+	Points			[0, 5]
+	DstBlock		"FixPt to Dbl6"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 80]
+	DstBlock		"Cell1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Discrete Filter2"
+      SrcPort		      1
+      Points		      [0, 0; 40, 0]
+      Branch {
+	DstBlock		"Discrete Filter3"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -80]
+	DstBlock		"Sauve e24"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Discrete Filter3"
+      SrcPort		      1
+      DstBlock		      "Sauve e1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Cell1"
+      SrcPort		      1
+      DstBlock		      "Cell2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Cell2"
+      SrcPort		      1
+      DstBlock		      "Cell3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Cell3"
+      SrcPort		      1
+      DstBlock		      "Cell4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Cell4"
+      SrcPort		      1
+      DstBlock		      "6"
+      DstPort		      1
+    }
+  }
+}
