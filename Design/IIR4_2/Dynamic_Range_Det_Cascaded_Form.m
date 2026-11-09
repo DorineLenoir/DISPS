@@ -55,10 +55,10 @@
 
    disp('Fill the code')
 
-   H_y1 =
-   H_y2 =
-   H_y3 =
-   H_y4 =
+   H_y1 = H1;
+   H_y2 =H1*H2;                             %fait bien tout seul car on est en objet
+   H_y3 =H1*H2*H3;
+   H_y4 =H1*H2*H3*H4;
    
    % Dynamic range for y_i(n) 
  
@@ -93,10 +93,10 @@
 
     disp('Fill the code')
 
-   H_w1 =
-   H_w2 =
-   H_w3 =
-   H_w4 =
+   H_w1 = Hd1;
+   H_w2 =H1*Hd2;
+   H_w3 =H1*H2*Hd3;
+   H_w4 =H1*H2*H3*Hd4;
    
    % Dynamic range for w_i(n) 
  
