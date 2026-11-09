@@ -11,6 +11,6 @@ N=format_x.N;
 
 xint=round(x*2^N);
 xq=xint*2^(-N);
-disp('Fill the code to compute the fixed-point value')
+%disp('Fill the code to compute the fixed-point value')
 
 

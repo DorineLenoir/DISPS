@@ -14,5 +14,5 @@ function    mx = integer_word_length(x,s)
   else
       mx=floor(log2(max(x)))+1+s;
   end
-disp('Fill the code to compute the integer part word-length')
+%disp('Fill the code to compute the integer part word-length')
 

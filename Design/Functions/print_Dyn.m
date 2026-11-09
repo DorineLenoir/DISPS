@@ -1,4 +1,4 @@
-function print_Dyn(var,Dyn_L1,M_L1,Dyn_Cheby,M_Cheby)
+ function print_Dyn(var,Dyn_L1,M_L1,Dyn_Cheby,M_Cheby)
 
 
 disp(strcat(...

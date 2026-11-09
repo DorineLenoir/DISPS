@@ -17,7 +17,7 @@ addpath('./IIR4_2/Direct_Form_I');
 addpath('./IIR4_2/Transposed_Form');
 addpath('../Implementation/testbench/');
 
-Permutation =1
+Permutation =0
  
 % Architecture definition  
     

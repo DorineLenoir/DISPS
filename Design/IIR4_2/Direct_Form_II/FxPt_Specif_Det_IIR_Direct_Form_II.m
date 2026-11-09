@@ -29,26 +29,27 @@ disp(strcat(sprintf('\n Determination of the fixed-point format for Direct Form 
 
 disp('Fill the code')
 
-    % Coefficients 
+    % Coefficients : combien de bits entiers sont réservés aux coefficients du filtre
   
-Mb =
+Mb = integer_word_length(max(max(abs(NumCas(:)))),1); %numerateur
 
-Ma =
+Ma = integer_word_length(max(max(abs(DenCas(:)))),1);  %denominateur
 
 
     % Data 
 
     % Multiplication output: w*a
 
-Mz1 =
+Mz1 = Ma+Mw; %
 
-Madd1 =
+Madd1 =max([Mz1,Mx,My,Mw]);
 
-    % Multiplication output: w*b
+    % Multiplication output: w*b 
+    % M des bits entiers d’un produit = somme des M des opérandes
 
-Mz2 =
+Mz2 =Mw+Mb;
 
-Madd2 =
+Madd2 = max([Mz2,Mx,My,Mw]); % on doit prendre les sorties aussi d'où Mw
 
 
 % Fixed-point format for Simulink simulation ---------------------------------------

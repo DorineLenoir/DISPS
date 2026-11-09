@@ -7,7 +7,7 @@ function xi = int_value(x,format_x)
 %   Output
 %       xi : integer value having the same binary representtaion as the fixed-point value with the fomrat format_x.
 
-disp('Fill the code to compute the integer value')
+%disp('Fill the code to compute the integer value')
 
 xi=x;
 
