@@ -9,7 +9,7 @@ close all;
 clear all;
 
 addpath('./Filter');
-addpath('./RepFreq');
+addpath('./RepFreq' );
 addpath('./Functions');
 addpath('./IIR4_2');
 addpath('./IIR4_2/Direct_Form_II');
@@ -17,7 +17,7 @@ addpath('./IIR4_2/Direct_Form_I');
 addpath('./IIR4_2/Transposed_Form');
 addpath('../Implementation/testbench/');
 
-Permutation =0
+Permutation =1
  
 % Architecture definition  
     
@@ -96,7 +96,7 @@ Permutation =0
   
   % Forme transpose 
    
-%   FxPt_Specif_Det_IIR_Transposed_Form;  % Fixed-point format determination   
+% FxPt_Specif_Det_IIR_Transposed_Form;  % Fixed-point format determination   
 %    
 %   sim('IIR_Transposed_Form');              % Fixed-point and floating-point simulation 
 %    

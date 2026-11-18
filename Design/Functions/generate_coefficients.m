@@ -5,7 +5,7 @@ NumCasInt = int_value(NumCas, b);
 
 
 
-FileID = fopen('../Implementation/src/filter_coefficients.h','w');
+FileID = fopen('C:\Users\dodol\Documents\EII\5A\DISPS\src_educ\src_educ\Implementation\src/filter_coefficients.h','w');
     
     
 fprintf(FileID, 'float a_flpt[4][3] = {');    

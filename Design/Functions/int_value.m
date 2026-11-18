@@ -9,5 +9,10 @@ function xi = int_value(x,format_x)
 
 %disp('Fill the code to compute the integer value')
 
-xi=x;
 
+    xq = fx_pt_value(x, format_x);
+
+
+    xi = round(xq .* 2^format_x.N);
+
+end
